@@ -1,65 +1,51 @@
-# Ignore Binaries and Build artifacts
+# Ignore Unreal Engine project generated files
 /Binaries/
 /Build/
 /DerivedDataCache/
 /Intermediate/
 /Saved/
 
-# Ignore specific Unreal temporary files
+# Ignore temporary files
 *.tmp
 *.log
-*.vs
+
+# Ignore Visual Studio files
+.vs/
 *.suo
 *.sdf
 *.VC.db
 *.VC.opendb
 *.local
 
-# Ignore auto-generated Visual Studio project files
-*.VC.db
-*.VC.opendb
-*.opensdf
-*.sln
-
-# Ignore optional plugins
+# Ignore optional plugin files
 /Plugins/*/Binaries/
 /Plugins/*/Intermediate/
 /Plugins/*/Saved/
 
-# Ignore MacOS and Windows-specific files
+# Ignore MacOS and Windows system files
 .DS_Store
 Thumbs.db
 
-# Ignore any backup or cache files
+# Ignore backup and cache files
 *.bak
 *.swp
 
-# Include essential project files
-!.uproject
-!Config/**
-!Content/**
-!Source/**
-
-# Ignore built assets
+# Ignore built assets (tracked with Git LFS)
 Content/**/*.uasset
 Content/**/*.umap
 
-# Ignore Visual Studio files
-.vs/
-*.vsidx
+# Exclude non-essential files from Visual Studio
 *.vcxproj
-*.VC.opendb
-*.VC.db
-
-# Ignore Unreal Engine files
-/Binaries/
-/Build/
-/DerivedDataCache/
-/Intermediate/
-/Saved/
+*.opensdf
+*.sln
 
 # Include only necessary files
 !.uproject
 !Config/**
 !Content/**
 !Source/**
+
+# Explicitly track essential binary files using Git LFS
+# These files are Unreal assets, tracked with Git LFS
+*.uasset
+*.umap
