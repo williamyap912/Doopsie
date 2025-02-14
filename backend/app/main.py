@@ -19,10 +19,6 @@ Base.metadata.create_all(bind=engine)
 for route in app.routes:
     print(f"Route Path: {route.path} | Methods: {route.methods}")
 
-@app.get("/")
-def read_root():
-    return {"message": "Task Management API is running"}
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
